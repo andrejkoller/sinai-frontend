@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ComponentService } from '../../../services/component.service';
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
