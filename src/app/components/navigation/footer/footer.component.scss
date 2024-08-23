@@ -1,0 +1,12 @@
+:host {
+  width: 100%;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 10vh;
+  width: 100%;
+  margin-left: auto;
+  box-shadow: 0px -1px 0px #eeede7;
+}

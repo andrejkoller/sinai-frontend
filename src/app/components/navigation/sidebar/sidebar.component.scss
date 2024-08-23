@@ -1,0 +1,84 @@
+.sidebar-container {
+  display: grid;
+  grid-template-rows: 15vh 75vh 10vh;
+  justify-content: center;
+  width: 5vw;
+  box-shadow: 1px 0px 0px #eeede7;
+
+  .sidebar-grid-one {
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      font-family: montserrat-blackitalic;
+      font-size: 2.5em;
+      color: #0836c1;
+      cursor: pointer;
+    }
+  }
+
+  .sidebar-grid-two {
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    .sidebar-grid-two-inside-one {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 2em;
+
+      .fa-calendar-days {
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      .fa-bookmark {
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      .fa-circle-question {
+        font-size: 24px;
+        cursor: pointer;
+      }
+    }
+
+    .sidebar-grid-two-inside-two {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 2em;
+
+      .fa-gauge {
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      .fa-gear {
+        font-size: 24px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .sidebar-grid-three {
+    grid-row: 3;
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 40px;
+      width: 40px;
+      border: 1px solid;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+  }
+}
