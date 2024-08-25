@@ -4,7 +4,15 @@ import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { provideNativeDateAdapter } from '@angular/material/core';
+import { provideToastr, ToastrModule } from 'ngx-toastr';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideClientHydration(), provideAnimationsAsync()]
+  providers: [
+    provideRouter(routes),
+    provideClientHydration(),
+    provideAnimationsAsync(),
+    provideNativeDateAdapter(),
+    provideToastr(),
+  ],
 };

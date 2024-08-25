@@ -1,1 +1,38 @@
-<p>login works!</p>
+<div class="login-container">
+  <div class="login-content">
+    <mat-card class="login-card">
+      <mat-card-content>
+        <div class="login-title">
+          <h1>Sinai</h1>
+        </div>
+        <div class="login-wrap">
+          <form class="login-form">
+            <mat-form-field class="example-full-width">
+              <mat-label>Username</mat-label>
+              <input matInput placeholder="Enter your username" />
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+              <mat-label>Password</mat-label>
+              <input
+                matInput
+                type="password"
+                placeholder="Enter your password"
+              />
+            </mat-form-field>
+          </form>
+          <div class="button-container">
+            <button mat-stroked-button>Login</button>
+          </div>
+          <div class="login-bottom-wrap">
+            <div class="sign-up-redirection">
+              <div>Don't have an account?</div>
+              <div class="sign-up-link" routerLink="/registration">
+                Sign up for Sinai
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

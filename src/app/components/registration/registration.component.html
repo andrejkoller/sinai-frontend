@@ -1,1 +1,52 @@
-<p>registration works!</p>
+<div class="registration-container">
+  <div class="registration-content">
+    <mat-card class="registration-card">
+      <mat-card-content class="registration-card-content">
+        <div class="registration-title">
+          <h1>Sinai</h1>
+        </div>
+        <div class="registration-wrap">
+          <form class="registration-form">
+            <div class="username-email-wrap">
+              <mat-form-field>
+                <mat-label>Username</mat-label>
+                <input matInput placeholder="Enter your username" />
+              </mat-form-field>
+              <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input matInput type="email" placeholder="Enter your email" />
+              </mat-form-field>
+            </div>
+            <div class="password-wrap">
+              <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input
+                  matInput
+                  type="password"
+                  placeholder="Enter your password"
+                />
+              </mat-form-field>
+              <mat-form-field>
+                <mat-label>Confirm Password</mat-label>
+                <input
+                  matInput
+                  type="password"
+                  placeholder="Confirm your password"
+                />
+              </mat-form-field>
+            </div>
+          </form>
+          <div class="button-container">
+            <button mat-stroked-button (click)="register()">Register</button>
+          </div>
+          <div class="registration-bottom-wrap">
+            <div class="sign-in-redirection">
+              <div>Have already an account?</div>
+              <div class="sign-in-link" routerLink="/login">Then sign in</div>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

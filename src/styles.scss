@@ -1,3 +1,9 @@
+@use "./assets/theme/theme_settings";
+@use "./assets/theme/var";
+@use "@angular/material" as mat;
+@import "./assets/theme/theme_settings";
+@import "./assets/theme/var";
+
 @font-face {
   font-family: montserrat-regular;
   src: url(assets/font/Montserrat-Regular.ttf);
@@ -10,7 +16,7 @@
 
 @font-face {
   font-family: montserrat-semibold;
-  src: url(assets/font/Montserrat-semibold.ttf);
+  src: url(assets/font/Montserrat-SemiBold.ttf);
 }
 
 @font-face {
@@ -26,7 +32,6 @@ body {
   width: 100%;
   box-sizing: border-box;
   margin: 0;
+  font-family: montserrat-regular, "sans-serif";
+  overflow-x: hidden;
 }
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

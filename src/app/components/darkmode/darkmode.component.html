@@ -1,0 +1,13 @@
+<div class="darkmode-container">
+  <div class="darkmode-content">
+    <i
+      #darkModeIcon
+      class="fa-regular"
+      [ngClass]="isDarkMode ? 'fa-moon' : 'fa-sun'"
+    ></i>
+    <mat-slide-toggle
+      [checked]="isDarkMode"
+      (change)="onDarkModeSwitched($event)"
+    ></mat-slide-toggle>
+  </div>
+</div>

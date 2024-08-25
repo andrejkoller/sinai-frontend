@@ -3,7 +3,6 @@
   grid-template-rows: 15vh 75vh 10vh;
   justify-content: center;
   width: 5vw;
-  box-shadow: 1px 0px 0px #eeede7;
 
   .sidebar-grid-one {
     grid-row: 1;
@@ -14,7 +13,7 @@
     h1 {
       font-family: montserrat-blackitalic;
       font-size: 2.5em;
-      color: #0836c1;
+      color: var(--primary-color);
       cursor: pointer;
     }
   }
@@ -35,16 +34,25 @@
 
       .fa-calendar-days {
         font-size: 24px;
+        padding: 8px;
         cursor: pointer;
       }
 
       .fa-bookmark {
         font-size: 24px;
+        padding: 8px;
         cursor: pointer;
       }
 
       .fa-circle-question {
         font-size: 24px;
+        padding: 8px;
+        cursor: pointer;
+      }
+
+      .fa-gauge {
+        font-size: 24px;
+        padding: 8px;
         cursor: pointer;
       }
     }
@@ -55,16 +63,6 @@
       align-items: center;
       justify-content: flex-end;
       gap: 2em;
-
-      .fa-gauge {
-        font-size: 24px;
-        cursor: pointer;
-      }
-
-      .fa-gear {
-        font-size: 24px;
-        cursor: pointer;
-      }
     }
   }
 
@@ -73,12 +71,62 @@
     display: flex;
     align-items: center;
 
-    img {
+    button {
+      padding: 0;
       height: 40px;
-      width: 40px;
       border: 1px solid;
+      width: 40px;
       border-radius: 999px;
-      cursor: pointer;
+      min-width: 0;
+
+      img {
+        display: flex;
+        height: 40px;
+        width: 40px;
+        border: 1px solid;
+        border-radius: 999px;
+        cursor: pointer;
+      }
     }
   }
+}
+
+.active {
+  color: #007bff; /* Change to your desired active color */
+}
+
+::ng-deep .light-theme .logout-button {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px -1px 0px 0px !important;
+}
+
+::ng-deep .dark-theme .logout-button {
+  box-shadow: rgba(255, 255, 255, 0.15) 0px 0px 0px 1px !important;
+}
+
+::ng-deep .cdk-overlay-connected-position-bounding-box {
+  left: 0 !important;
+}
+
+::ng-deep .mat-mdc-menu-item {
+  text-align: center !important;
+}
+
+::ng-deep .mat-mdc-menu-item-text {
+  font-size: 18px !important;
+}
+
+::ng-deep .mat-mdc-menu-content {
+  padding: 0px !important;
+}
+
+::ng-deep .light-theme .profile-menu {
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+::ng-deep .light-theme .sidebar-container {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px !important;
+}
+
+::ng-deep .dark-theme .sidebar-container {
+  box-shadow: rgba(255, 255, 255, 0.15) 0px 0px 0px 1px !important;
 }

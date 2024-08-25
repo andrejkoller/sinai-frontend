@@ -13,6 +13,7 @@
   .app-wrapper {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     height: 100vh;
     width: 100%;
 
@@ -26,6 +27,7 @@
     .app-body {
       display: flex;
       flex-direction: column;
+      justify-content: center;
       height: 75vh;
       width: 100%;
       margin-left: auto;

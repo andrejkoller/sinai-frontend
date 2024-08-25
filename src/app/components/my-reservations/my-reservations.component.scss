@@ -1,0 +1,49 @@
+.my-reservations-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: 128px;
+  margin-right: 128px;
+
+  .my-reservations-content {
+    .my-reservations-card {
+      width: 850px;
+      height: auto;
+
+      .my-reservations-table {
+        .delete-button {
+          border-radius: var(--border-radius);
+          width: 34px;
+          height: 34px;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+
+::ng-deep .mat-elevation-z8,
+.mat-mdc-elevation-specific.mat-elevation-z8 {
+  box-shadow: none !important;
+}
+
+::ng-deep .light-theme .my-reservations-card {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px !important;
+}
+
+::ng-deep .dark-theme .my-reservations-card {
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(255, 255, 255, 0.15) 0px 0px 0px 1px !important;
+}
+
+::ng-deep .mat-mdc-button-touch-target {
+  height: 0px !important;
+}
+
+::ng-deep .light-theme .delete-button:hover {
+  background-color: var(--light-delete-color);
+}
+
+::ng-deep .dark-theme .delete-button:hover {
+  background-color: var(--dark-delete-color);
+}

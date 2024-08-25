@@ -6,13 +6,15 @@ import { ComponentService } from '../../../services/component.service';
   standalone: true,
   imports: [],
   templateUrl: './date.component.html',
-  styleUrl: './date.component.scss'
+  styleUrl: './date.component.scss',
 })
 export class DateComponent implements OnInit {
-
-  constructor() {}
+  constructor(private componentService: ComponentService) {}
 
   ngOnInit(): void {
+    this.componentService.showDate();
+    this.componentService.hideMyReservationsTitle();
+    this.componentService.hideFaqTitle();
+    this.componentService.hideDashboardTitle();
   }
-
 }

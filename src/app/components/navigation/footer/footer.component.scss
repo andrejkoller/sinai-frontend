@@ -8,5 +8,18 @@
   height: 10vh;
   width: 100%;
   margin-left: auto;
-  box-shadow: 0px -1px 0px #eeede7;
+
+  .footer-grid-three {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 50px;
+
+    .socials-link {
+      a {
+        text-decoration: none;
+        box-shadow: 0px 1px 0px #000;
+      }
+    }
+  }
 }

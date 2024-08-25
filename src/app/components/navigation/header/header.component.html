@@ -1,27 +1,72 @@
 @if (this.componentService.visible === true) {
 <div class="header-container">
   <div class="header-grid-one">
+    @if (this.componentService.datepicker === true) {
     <form>
-      <div>
-        <mat-form-field class="example-full-width">
-          <mat-label>Choose a date</mat-label>
-          <input matInput [matDatepicker]="picker">
-          <mat-hint>MM/DD/YYYY</mat-hint>
-          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-          <mat-datepicker touchUi #picker></mat-datepicker>
-        </mat-form-field>
-      </div>
-      <div>
-        <mat-form-field class="example-full-width">
-          <mat-label>Choose a date</mat-label>
-          <input matInput [matDatepicker]="picker">
-          <mat-hint>MM/DD/YYYY</mat-hint>
-          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-          <mat-datepicker touchUi #picker></mat-datepicker>
-        </mat-form-field>
+      <div class="header-date-row">
+        <div>
+          <mat-form-field>
+            <mat-label>Begin of reservation</mat-label>
+            <input matInput [matDatepicker]="picker1" />
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle
+              matIconSuffix
+              [for]="picker1"
+            ></mat-datepicker-toggle>
+            <mat-datepicker touchUi #picker1></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div>
+          <hr />
+        </div>
+        <div>
+          <mat-form-field>
+            <mat-label>End of reservation</mat-label>
+            <input matInput [matDatepicker]="picker2" />
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle
+              matIconSuffix
+              [for]="picker2"
+            ></mat-datepicker-toggle>
+            <mat-datepicker touchUi #picker2></mat-datepicker>
+          </mat-form-field>
+        </div>
       </div>
     </form>
+    } @else if (this.componentService.myReservationsTitle === true) {
+    <div class="my-reservations-title">
+      <h1>My reservations</h1>
+    </div>
+    } @else if (this.componentService.faqTitle === true) {
+    <div class="faq-title">
+      <p>Frequently Asked Questions</p>
+      <h1>How can we help you?</h1>
+    </div>
+    } @else if (this.componentService.dashboardTitle === true) {
+    <div class="dashboard-title">
+      <h1>Dashboard</h1>
+    </div>
+    } @else if (this.componentService.settingsTitle === true) {
+    <div class="dashboard-title">
+      <h1>Settings</h1>
+    </div>
+    }
   </div>
-  <div class="header-grid-two"></div>
+  <div class="header-grid-two">
+    <div class="button-container">
+      @if (this.componentService.datepicker === true) {
+      <div>
+        <button mat-stroked-button (click)="saveDate()">Confirm</button>
+      </div>
+      } @else if (this.componentService.department === true) {
+      <div>
+        <button mat-stroked-button>Cancel</button>
+      </div>
+      <div>
+        <button mat-stroked-button>Continue</button>
+      </div>
+      }
+    </div>
+  </div>
 </div>
 }

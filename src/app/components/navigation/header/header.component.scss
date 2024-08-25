@@ -7,5 +7,60 @@
   grid-template-columns: 1fr 1fr;
   height: 15vh;
   margin-left: auto;
-  box-shadow: 0px 1px 0px #eeede7;
+
+  .header-grid-one {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 50px;
+
+    .header-date-row {
+      display: flex;
+      align-items: center;
+      gap: 1em;
+
+      hr {
+        width: 15px;
+        border: 1px solid;
+        border-radius: var(--border-radius);
+        margin-bottom: 20px;
+      }
+    }
+
+    .faq-title {
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .header-grid-two {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 50px;
+
+    .button-container {
+      display: flex;
+      gap: 1em;
+
+      button {
+        border-radius: var(--border-radius);
+        width: 12em;
+        height: 56px;
+
+        i {
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+}
+
+::ng-deep .light-theme .header-container {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 0px 0px !important;
+}
+
+::ng-deep .dark-theme .header-container {
+  box-shadow: rgba(255, 255, 255, 0.15) 0px 1px 0px 0px !important;
 }

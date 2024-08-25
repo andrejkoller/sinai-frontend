@@ -1,32 +1,61 @@
 @if (this.componentService.visible === true) {
 <div class="sidebar-container">
   <div class="sidebar-grid-one">
-    <h1 class="sidebar-title" routerLink="/reserve/date">S</h1>
+    <h1 class="sidebar-title" routerLink="/">S</h1>
   </div>
   <div class="sidebar-grid-two">
     <div class="sidebar-grid-two-inside-one">
       <div>
-        <i class="fa-regular fa-calendar-days"></i>
+        <i
+          class="fa-regular fa-calendar-days"
+          routerLink="/reserve/date"
+          routerLinkActive="active"
+        ></i>
       </div>
       <div>
-        <i class="fa-regular fa-bookmark"></i>
+        <i
+          class="fa-regular fa-bookmark"
+          routerLink="/my-reservations"
+          routerLinkActive="active"
+        ></i>
       </div>
       <div>
-        <i class="fa-regular fa-circle-question"></i>
+        <i
+          class="fa-regular fa-circle-question"
+          routerLink="/faqs"
+          routerLinkActive="active"
+        ></i>
+      </div>
+      <div>
+        <i
+          class="fa-solid fa-gauge"
+          routerLink="/dashboard"
+          routerLinkActive="active"
+        ></i>
       </div>
     </div>
-    <div class="sidebar-grid-two-inside-two">
-      <div>
-        <i class="fa-solid fa-gauge"></i>
-      </div>
-      <div>
-        <i class="fa-solid fa-gear"></i>
-      </div>
-    </div>
+    <div class="sidebar-grid-two-inside-two"></div>
   </div>
   <div class="sidebar-grid-three">
-    <img src="assets/images/profile.jpg" />
+    <button
+      mat-stroked-button
+      class="image-default"
+      [matMenuTriggerFor]="menu"
+    ></button>
+    <mat-menu class="profile-menu" #menu="matMenu">
+      <div class="darkmode-button">
+        <button mat-menu-item>
+          <app-darkmode
+            #darkModeSwitch
+            (darkModeSwitched)="callSwitchMode($event)"
+            [isDarkMode]="darkmodeService.isDarkMode"
+          ></app-darkmode>
+        </button>
+      </div>
+      <div class="logout-button">
+        <button mat-menu-item (click)="logout()">Logout</button>
+      </div>
+    </mat-menu>
   </div>
 </div>
-
 }
