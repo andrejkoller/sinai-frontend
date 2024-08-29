@@ -2,20 +2,41 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin-left: 128px;
-  margin-right: 128px;
+  margin-left: 50px;
+  margin-right: 50px;
+
+  .my-reservations-title {
+    width: 100%;
+
+    p {
+      font-size: 18px;
+      font-family: montserrat-regular;
+      text-align: left;
+    }
+  }
 
   .my-reservations-content {
+    width: 100%;
+
     .my-reservations-card {
-      width: 850px;
+      width: 100%;
       height: auto;
 
-      .my-reservations-table {
-        .delete-button {
-          border-radius: var(--border-radius);
-          width: 34px;
-          height: 34px;
-          box-shadow: none;
+      .my-reservations-card-content {
+        .my-reservations-table {
+          .edit-button {
+            border-radius: var(--border-radius);
+            width: 34px;
+            height: 34px;
+            box-shadow: none;
+          }
+
+          .delete-button {
+            border-radius: var(--border-radius);
+            width: 34px;
+            height: 34px;
+            box-shadow: none;
+          }
         }
       }
     }
@@ -38,6 +59,14 @@
 
 ::ng-deep .mat-mdc-button-touch-target {
   height: 0px !important;
+}
+
+::ng-deep .light-theme .edit-button:hover {
+  background-color: var(--light-edit-color);
+}
+
+::ng-deep .dark-theme .edit-button:hover {
+  background-color: var(--dark-edit-color);
 }
 
 ::ng-deep .light-theme .delete-button:hover {

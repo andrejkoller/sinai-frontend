@@ -1,33 +1,70 @@
 <div class="my-reservations-container">
+  <div class="my-reservations-title">
+    <p>Reservation History</p>
+  </div>
   <div class="my-reservations-content">
     <mat-card class="my-reservations-card">
-      <mat-card-content>
+      <mat-card-content class="my-reservations-card-content">
         <div class="my-reservations-table">
-          <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-            <ng-container matColumnDef="position">
+          <table
+            mat-table
+            [dataSource]="this.reservationService.getReservationSource()"
+            class="mat-elevation-z8"
+          >
+            <ng-container matColumnDef="Id">
               <th mat-header-cell *matHeaderCellDef>No.</th>
-              <td mat-cell *matCellDef="let element">{{ element.position }}</td>
+              <td mat-cell *matCellDef="let workplace">{{ workplace.id }}</td>
             </ng-container>
 
-            <ng-container matColumnDef="name">
-              <th mat-header-cell *matHeaderCellDef>Name</th>
-              <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+            <ng-container matColumnDef="Status">
+              <th mat-header-cell *matHeaderCellDef>Status</th>
+              <td mat-cell *matCellDef="let reservation">
+                {{ reservation.status }}
+              </td>
             </ng-container>
 
-            <ng-container matColumnDef="weight">
-              <th mat-header-cell *matHeaderCellDef>Weight</th>
-              <td mat-cell *matCellDef="let element">{{ element.weight }}</td>
+            <ng-container matColumnDef="Start">
+              <th mat-header-cell *matHeaderCellDef>Start</th>
+              <td mat-cell *matCellDef="let reservation">
+                {{ reservation.start_time }}
+              </td>
             </ng-container>
 
-            <ng-container matColumnDef="symbol">
-              <th mat-header-cell *matHeaderCellDef>Symbol</th>
-              <td mat-cell *matCellDef="let element">{{ element.symbol }}</td>
+            <ng-container matColumnDef="End">
+              <th mat-header-cell *matHeaderCellDef>End</th>
+              <td mat-cell *matCellDef="let reservation">
+                {{ reservation.end_time }}
+              </td>
             </ng-container>
 
-            <ng-container matColumnDef="delete">
+            <ng-container matColumnDef="Note">
+              <th mat-header-cell *matHeaderCellDef>Note</th>
+              <td mat-cell *matCellDef="let reservation">
+                {{ reservation.notes }}
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="Edit">
               <th mat-header-cell *matHeaderCellDef></th>
-              <td mat-cell *matCellDef="let element">
-                <button class="delete-button" mat-fab>
+              <td mat-cell *matCellDef="let reservation">
+                <button
+                  class="edit-button"
+                  mat-fab
+                  (click)="editReservation(reservation.id)"
+                >
+                  <i class="fa-solid fa-pencil"></i>
+                </button>
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="Delete">
+              <th mat-header-cell *matHeaderCellDef></th>
+              <td mat-cell *matCellDef="let reservation">
+                <button
+                  class="delete-button"
+                  mat-fab
+                  (click)="deleteReservation(reservation.id)"
+                >
                   <i class="fa-solid fa-trash"></i>
                 </button>
               </td>
@@ -36,6 +73,10 @@
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
           </table>
+          <mat-paginator
+            [pageSizeOptions]="[5, 10]"
+            aria-label="Select page of users"
+          ></mat-paginator>
         </div>
       </mat-card-content>
     </mat-card>

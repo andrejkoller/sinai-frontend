@@ -27,10 +27,11 @@
     .app-body {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       height: 75vh;
       width: 100%;
       margin-left: auto;
+      margin-top: 40px;
     }
 
     .app-footer {

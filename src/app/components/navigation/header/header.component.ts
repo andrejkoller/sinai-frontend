@@ -6,6 +6,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
+import { ReservationService } from '../../../services/reservation.service';
 
 @Component({
   selector: 'app-header',
@@ -23,6 +24,7 @@ export class HeaderComponent implements OnInit {
   constructor(
     protected componentService: ComponentService,
     private toastr: ToastrService,
+    private reservationService: ReservationService,
     private router: Router
   ) {}
 
@@ -32,6 +34,13 @@ export class HeaderComponent implements OnInit {
 
   saveDate() {
     this.router.navigate(['/reserve/department']);
+  }
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.reservationService.reservationSource.filter = filterValue
+      .trim()
+      .toLowerCase();
   }
 
   logout() {

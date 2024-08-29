@@ -1,7 +1,7 @@
 @if (this.componentService.visible === true) {
 <div class="sidebar-container">
   <div class="sidebar-grid-one">
-    <h1 class="sidebar-title" routerLink="/">S</h1>
+    <h1 class="sidebar-title" routerLink="/reserve/date">S</h1>
   </div>
   <div class="sidebar-grid-two">
     <div class="sidebar-grid-two-inside-one">
@@ -21,20 +21,21 @@
       </div>
       <div>
         <i
-          class="fa-regular fa-circle-question"
-          routerLink="/faqs"
-          routerLinkActive="active"
-        ></i>
-      </div>
-      <div>
-        <i
           class="fa-solid fa-gauge"
           routerLink="/dashboard"
           routerLinkActive="active"
         ></i>
       </div>
     </div>
-    <div class="sidebar-grid-two-inside-two"></div>
+    <div class="sidebar-grid-two-inside-two">
+      <div>
+        <i
+          class="fa-regular fa-circle-question"
+          routerLink="/faqs"
+          routerLinkActive="active"
+        ></i>
+      </div>
+    </div>
   </div>
   <div class="sidebar-grid-three">
     <button

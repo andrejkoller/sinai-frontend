@@ -35,7 +35,15 @@
     </form>
     } @else if (this.componentService.myReservationsTitle === true) {
     <div class="my-reservations-title">
-      <h1>My reservations</h1>
+      <mat-form-field>
+        <mat-label>Filter</mat-label>
+        <input
+          matInput
+          (keyup)="applyFilter($event)"
+          placeholder="Ex. ium"
+          #input
+        />
+      </mat-form-field>
     </div>
     } @else if (this.componentService.faqTitle === true) {
     <div class="faq-title">

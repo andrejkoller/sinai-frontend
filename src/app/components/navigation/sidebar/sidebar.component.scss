@@ -30,29 +30,20 @@
       flex-direction: column;
       align-items: center;
       justify-content: flex-end;
-      gap: 2em;
+      gap: 2.5em;
 
       .fa-calendar-days {
         font-size: 24px;
-        padding: 8px;
         cursor: pointer;
       }
 
       .fa-bookmark {
         font-size: 24px;
-        padding: 8px;
-        cursor: pointer;
-      }
-
-      .fa-circle-question {
-        font-size: 24px;
-        padding: 8px;
         cursor: pointer;
       }
 
       .fa-gauge {
         font-size: 24px;
-        padding: 8px;
         cursor: pointer;
       }
     }
@@ -63,6 +54,11 @@
       align-items: center;
       justify-content: flex-end;
       gap: 2em;
+
+      .fa-circle-question {
+        font-size: 24px;
+        cursor: pointer;
+      }
     }
   }
 
@@ -92,7 +88,11 @@
 }
 
 .active {
-  color: #007bff; /* Change to your desired active color */
+  color: #007bff;
+}
+
+i:hover {
+  color: #007bff;
 }
 
 ::ng-deep .light-theme .logout-button {
@@ -101,10 +101,6 @@
 
 ::ng-deep .dark-theme .logout-button {
   box-shadow: rgba(255, 255, 255, 0.15) 0px 0px 0px 1px !important;
-}
-
-::ng-deep .cdk-overlay-connected-position-bounding-box {
-  left: 0 !important;
 }
 
 ::ng-deep .mat-mdc-menu-item {

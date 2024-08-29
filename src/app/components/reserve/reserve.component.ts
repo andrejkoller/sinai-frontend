@@ -14,10 +14,7 @@ export class ReserveComponent implements OnInit {
   constructor(private componentService: ComponentService) {}
 
   ngOnInit(): void {
-    this.componentService.hideDate();
-    this.componentService.hideDepartment();
-    this.componentService.hideMyReservationsTitle();
-    this.componentService.hideFaqTitle();
-    this.componentService.hideDashboardTitle();
+    this.componentService.hideHeader();
+    this.componentService.hideSidebar();
   }
 }
