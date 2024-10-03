@@ -1,62 +1,76 @@
-@if (this.componentService.visible === true) {
+@if (this.componentService.sidebarVisible === true) {
 <div class="sidebar-container">
-  <div class="sidebar-grid-one">
-    <h1 class="sidebar-title" routerLink="/reserve/date">S</h1>
+  <div class="sidebar-wrap">
+    <div class="sidebar-grid-one">
+      <mat-card class="card-logo">
+        <mat-card-content class="card-logo-content">
+          <h1 class="sidebar-title" routerLink="/reserve/date">S</h1>
+        </mat-card-content>
+      </mat-card>
+      <div class="sidebar-details">
+        <div class="sidebar-details-brand">Sinai</div>
+        <div class="sidebar-details-profile">Andrej</div>
+      </div>
+    </div>
   </div>
   <div class="sidebar-grid-two">
     <div class="sidebar-grid-two-inside-one">
-      <div>
-        <i
-          class="fa-regular fa-calendar-days"
-          routerLink="/reserve/date"
-          routerLinkActive="active"
-        ></i>
+      <div routerLink="/reserve/date" routerLinkActive="active">
+        <i class="fa-regular fa-calendar-days"></i>
+        <p
+          [ngClass]="
+            this.componentService.statusLink
+              ? 'navlink-opened'
+              : 'navlink-closed'
+          "
+        >
+          Reserve
+        </p>
       </div>
-      <div>
-        <i
-          class="fa-regular fa-bookmark"
-          routerLink="/my-reservations"
-          routerLinkActive="active"
-        ></i>
+      <div routerLink="/my-reservations" routerLinkActive="active">
+        <i class="fa-regular fa-bookmark"></i>
+        <p
+          [ngClass]="
+            this.componentService.statusLink
+              ? 'navlink-opened'
+              : 'navlink-closed'
+          "
+        >
+          My Bookings
+        </p>
       </div>
-      <div>
-        <i
-          class="fa-solid fa-gauge"
-          routerLink="/dashboard"
-          routerLinkActive="active"
-        ></i>
+      <div routerLink="/faqs" routerLinkActive="active">
+        <i class="fa-regular fa-circle-question"></i>
+        <p
+          [ngClass]="
+            this.componentService.statusLink
+              ? 'navlink-opened'
+              : 'navlink-closed'
+          "
+        >
+          FAQ
+        </p>
+      </div>
+      <div routerLink="/dashboard" routerLinkActive="active">
+        <i class="fa-solid fa-gauge"></i>
+        <p
+          [ngClass]="
+            this.componentService.statusLink
+              ? 'navlink-opened'
+              : 'navlink-closed'
+          "
+        >
+          Dashboard
+        </p>
       </div>
     </div>
-    <div class="sidebar-grid-two-inside-two">
-      <div>
-        <i
-          class="fa-regular fa-circle-question"
-          routerLink="/faqs"
-          routerLinkActive="active"
-        ></i>
-      </div>
-    </div>
+    <div class="sidebar-grid-two-inside-two"></div>
   </div>
   <div class="sidebar-grid-three">
-    <button
-      mat-stroked-button
-      class="image-default"
-      [matMenuTriggerFor]="menu"
-    ></button>
-    <mat-menu class="profile-menu" #menu="matMenu">
-      <div class="darkmode-button">
-        <button mat-menu-item>
-          <app-darkmode
-            #darkModeSwitch
-            (darkModeSwitched)="callSwitchMode($event)"
-            [isDarkMode]="darkmodeService.isDarkMode"
-          ></app-darkmode>
-        </button>
-      </div>
-      <div class="logout-button">
-        <button mat-menu-item (click)="logout()">Logout</button>
-      </div>
-    </mat-menu>
+    <div class="logout-link">
+      <i class="fa-solid fa-door-open"></i>
+      <div mat-menu-item (click)="logout()">Logout</div>
+    </div>
   </div>
 </div>
 }

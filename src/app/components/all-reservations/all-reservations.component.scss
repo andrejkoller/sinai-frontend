@@ -1,0 +1,78 @@
+.all-reservations-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: 50px;
+  margin-right: 50px;
+
+  .all-reservations-title {
+    width: 100%;
+
+    p {
+      font-size: 18px;
+      font-family: montserrat-regular;
+      text-align: left;
+    }
+  }
+
+  .all-reservations-content {
+    width: 100%;
+
+    .all-reservations-card {
+      width: 100%;
+      height: auto;
+
+      .all-reservations-card-content {
+        .all-reservations-table {
+          .edit-button {
+            border-radius: var(--border-radius);
+            width: 34px;
+            height: 34px;
+            box-shadow: none;
+          }
+
+          .delete-button {
+            border-radius: var(--border-radius);
+            width: 34px;
+            height: 34px;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+::ng-deep .mat-elevation-z8,
+.mat-mdc-elevation-specific.mat-elevation-z8 {
+  box-shadow: none !important;
+}
+
+::ng-deep .light-theme .all-reservations-card {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px !important;
+}
+
+::ng-deep .dark-theme .all-reservations-card {
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(255, 255, 255, 0.15) 0px 0px 0px 1px !important;
+}
+
+::ng-deep .mat-mdc-button-touch-target {
+  height: 0px !important;
+}
+
+::ng-deep .light-theme .edit-button:hover {
+  background-color: var(--light-edit-color);
+}
+
+::ng-deep .dark-theme .edit-button:hover {
+  background-color: var(--dark-edit-color);
+}
+
+::ng-deep .light-theme .delete-button:hover {
+  background-color: var(--light-delete-color);
+}
+
+::ng-deep .dark-theme .delete-button:hover {
+  background-color: var(--dark-delete-color);
+}

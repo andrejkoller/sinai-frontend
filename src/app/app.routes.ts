@@ -14,6 +14,7 @@ import { EditReservationComponent } from './components/dashboard/edit-reservatio
 import { FaqComponent } from './components/faq/faq.component';
 import { ErrorComponent } from './components/error/error.component';
 import { MyReservationsComponent } from './components/my-reservations/my-reservations.component';
+import { AllReservationsComponent } from './components/all-reservations/all-reservations.component';
 
 export const routes: Routes = [
   {
@@ -24,57 +25,62 @@ export const routes: Routes = [
   {
     path: 'reserve/date',
     component: DateComponent,
-    title: 'Sinai - Date',
+    title: 'Sinai',
   },
   {
     path: 'reserve/department',
     component: DepartmentComponent,
-    title: 'Sinai - Department',
+    title: 'Sinai',
   },
   {
     path: 'reserve/workplace',
     component: WorkplaceComponent,
-    title: 'Sinai - Workplace',
+    title: 'Sinai',
   },
   {
     path: 'reserve/summary',
     component: SummaryComponent,
-    title: 'Sinai - Summary',
+    title: 'Sinai',
   },
   {
     path: 'my-reservations',
     component: MyReservationsComponent,
-    title: 'Sinai - My Reservations',
+    title: 'Sinai',
+  },
+  {
+    path: 'all-reservations',
+    component: AllReservationsComponent,
+    title: 'Sinai',
   },
   {
     path: 'faqs',
     component: FaqComponent,
-    title: 'Sinai - FAQs',
+    title: 'Sinai',
   },
   {
     path: 'dashboard',
     component: DashboardComponent,
-    title: 'Sinai - Dashboard',
+    title: 'Sinai',
   },
   {
     path: 'dashboard/edit/departments',
     component: EditDepartmentComponent,
-    title: 'Sinai - Edit Departments',
+    title: 'Sinai',
   },
   {
     path: 'dashboard/edit/workplaces',
     component: EditWorkplaceComponent,
-    title: 'Sinai - Edit Workplaces',
+    title: 'Sinai',
   },
   {
     path: 'dashboard/edit/reservations',
     component: EditReservationComponent,
-    title: 'Sinai - Edit Reservations',
+    title: 'Sinai',
   },
   {
     path: 'dashboard/edit/faqs',
     component: EditFaqComponent,
-    title: 'Sinai - Edit FAQs',
+    title: 'Sinai',
   },
   {
     path: 'registration',

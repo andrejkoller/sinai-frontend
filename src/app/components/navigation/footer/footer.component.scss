@@ -9,6 +9,16 @@
   width: 100%;
   margin-left: auto;
 
+  .footer-grid-one {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 50px;
+  }
+
+  .footer-grid-two {
+  }
+
   .footer-grid-three {
     display: flex;
     align-items: center;

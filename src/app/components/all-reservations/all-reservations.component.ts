@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { MatTableModule } from '@angular/material/table';
 import { ComponentService } from '../../services/component.service';
-import { MatCard, MatCardContent } from '@angular/material/card';
-import { MatButtonModule } from '@angular/material/button';
 import { ReservationService } from '../../services/reservation.service';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCard, MatCardContent } from '@angular/material/card';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table';
 
 @Component({
-  selector: 'app-my-reservations',
+  selector: 'app-all-reservations',
   standalone: true,
   imports: [
     MatTableModule,
@@ -16,10 +16,10 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatButtonModule,
     MatPaginatorModule,
   ],
-  templateUrl: './my-reservations.component.html',
-  styleUrl: './my-reservations.component.scss',
+  templateUrl: './all-reservations.component.html',
+  styleUrl: './all-reservations.component.scss',
 })
-export class MyReservationsComponent implements OnInit {
+export class AllReservationsComponent implements OnInit {
   displayedColumns: string[] = [
     'Id',
     'Status',

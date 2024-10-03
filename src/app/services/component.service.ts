@@ -4,9 +4,14 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class ComponentService {
-  visible: boolean = true;
+  headerVisible: boolean = true;
+  sidebarVisible: boolean = true;
+  footerVisible: boolean = true;
   datepicker: boolean = false;
   department: boolean = false;
+
+  status: boolean = true;
+  statusLink: boolean = true;
 
   myReservationsTitle: boolean = false;
   faqTitle: boolean = false;
@@ -17,29 +22,29 @@ export class ComponentService {
 
   /* Sidebar */
   showSidebar() {
-    this.visible = true;
+    this.sidebarVisible = true;
   }
 
   hideSidebar() {
-    this.visible = false;
+    this.sidebarVisible = false;
   }
 
   /* Header */
   showHeader() {
-    this.visible = true;
+    this.headerVisible = true;
   }
 
   hideHeader() {
-    this.visible = false;
+    this.headerVisible = false;
   }
 
   /* Footer */
   showFooter() {
-    this.visible = true;
+    this.footerVisible = true;
   }
 
   hideFooter() {
-    this.visible = false;
+    this.footerVisible = false;
   }
 
   /* Date */

@@ -6,6 +6,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { DarkmodeComponent } from '../../darkmode/darkmode.component';
 import { DarkmodeService } from '../../../services/darkmode.service';
 import { ToastrService } from 'ngx-toastr';
+import { NgClass } from '@angular/common';
+import { MatTooltip } from '@angular/material/tooltip';
+import { MatCard, MatCardContent } from '@angular/material/card';
 
 @Component({
   selector: 'app-sidebar',
@@ -16,6 +19,10 @@ import { ToastrService } from 'ngx-toastr';
     MatMenuModule,
     MatButtonModule,
     DarkmodeComponent,
+    NgClass,
+    MatTooltip,
+    MatCard,
+    MatCardContent
   ],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss',
@@ -29,7 +36,6 @@ export class SidebarComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.componentService.showSidebar();
   }
 
   callSwitchMode(isDarkMode: boolean) {

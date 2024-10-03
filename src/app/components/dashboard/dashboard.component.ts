@@ -13,6 +13,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.componentService.showDashboardTitle();
+    this.componentService.hideHeader();
     this.componentService.hideDate();
     this.componentService.hideDepartment();
     this.componentService.hideMyReservationsTitle();

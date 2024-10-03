@@ -1,7 +1,17 @@
-@if (this.componentService.visible === true) {
+@if (this.componentService.footerVisible === true) {
 <div class="footer-container">
   <div class="footer-grid-one"></div>
   <div class="footer-grid-two"></div>
-  <div class="footer-grid-three"></div>
+  <div class="footer-grid-three">
+    <div class="darkmode">
+      <div>
+        <app-darkmode
+          #darkModeSwitch
+          (darkModeSwitched)="callSwitchMode($event)"
+          [isDarkMode]="darkmodeService.isDarkMode"
+        ></app-darkmode>
+      </div>
+    </div>
+  </div>
 </div>
 }

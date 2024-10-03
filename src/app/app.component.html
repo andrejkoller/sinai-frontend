@@ -1,8 +1,14 @@
 <div class="app-overall mat-typography mat-app-background">
-  <div class="app-sidebar">
+  <div
+    class="app-sidebar"
+    [ngClass]="this.componentService.status ? 'sidebar-opened' : 'sidebar-closed'"
+  >
     <app-sidebar></app-sidebar>
   </div>
-  <div class="app-wrapper">
+  <div
+    class="app-wrapper"
+    [ngClass]="this.componentService.status ? 'body-opened' : 'body-closed'"
+  >
     <div class="app-header">
       <app-header></app-header>
     </div>

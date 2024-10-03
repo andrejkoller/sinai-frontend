@@ -3,16 +3,18 @@
 }
 
 .header-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   height: 15vh;
+  width: 100%;
+  gap: 1em;
   margin-left: auto;
 
-  .header-grid-one {
+  .header-flex-one {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     margin-left: 50px;
+    width: 100%;
 
     .header-date-row {
       display: flex;
@@ -27,6 +29,14 @@
       }
     }
 
+    .my-reservations-title {
+      width: 100%;
+
+      .reservations-filter {
+        width: 100%;
+      }
+    }
+
     .faq-title {
       p {
         margin-bottom: 0;
@@ -34,7 +44,7 @@
     }
   }
 
-  .header-grid-two {
+  .header-flex-two {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -43,11 +53,13 @@
     .button-container {
       display: flex;
       gap: 1em;
+      margin-bottom: 20px;
 
       button {
         border-radius: var(--border-radius);
         width: 12em;
         height: 56px;
+        font-size: 16px;
 
         i {
           padding-left: 5px;

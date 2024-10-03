@@ -1,6 +1,6 @@
-@if (this.componentService.visible === true) {
+@if (this.componentService.headerVisible === true) {
 <div class="header-container">
-  <div class="header-grid-one">
+  <div class="header-flex-one">
     @if (this.componentService.datepicker === true) {
     <form>
       <div class="header-date-row">
@@ -35,20 +35,10 @@
     </form>
     } @else if (this.componentService.myReservationsTitle === true) {
     <div class="my-reservations-title">
-      <mat-form-field>
-        <mat-label>Filter</mat-label>
-        <input
-          matInput
-          (keyup)="applyFilter($event)"
-          placeholder="Ex. ium"
-          #input
-        />
+      <mat-form-field class="reservations-filter">
+        <mat-label>Search</mat-label>
+        <input matInput (keyup)="applyFilter($event)" #input />
       </mat-form-field>
-    </div>
-    } @else if (this.componentService.faqTitle === true) {
-    <div class="faq-title">
-      <p>Frequently Asked Questions</p>
-      <h1>How can we help you?</h1>
     </div>
     } @else if (this.componentService.dashboardTitle === true) {
     <div class="dashboard-title">
@@ -60,7 +50,7 @@
     </div>
     }
   </div>
-  <div class="header-grid-two">
+  <div class="header-flex-two">
     <div class="button-container">
       @if (this.componentService.datepicker === true) {
       <div>
@@ -72,6 +62,17 @@
       </div>
       <div>
         <button mat-stroked-button>Continue</button>
+      </div>
+      } @else if (this.componentService.myReservationsTitle === true) {
+      <div>
+        <button mat-stroked-button routerLink="/my-reservations">
+          My Reservations
+        </button>
+      </div>
+      <div>
+        <button mat-stroked-button routerLink="/all-reservations">
+          All Reservations
+        </button>
       </div>
       }
     </div>

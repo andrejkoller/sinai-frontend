@@ -13,6 +13,7 @@ export class DateComponent implements OnInit {
 
   ngOnInit(): void {
     this.componentService.showDate();
+    this.componentService.showHeader();
     this.componentService.hideMyReservationsTitle();
     this.componentService.hideFaqTitle();
     this.componentService.hideDashboardTitle();

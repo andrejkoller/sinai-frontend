@@ -12,6 +12,7 @@ export class FaqComponent implements OnInit {
   constructor(private componentService: ComponentService) {}
 
   ngOnInit(): void {
+    this.componentService.hideHeader();
     this.componentService.hideDate();
     this.componentService.hideDepartment();
     this.componentService.hideMyReservationsTitle();

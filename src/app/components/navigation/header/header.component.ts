@@ -5,7 +5,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { ToastrService } from 'ngx-toastr';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { ReservationService } from '../../../services/reservation.service';
 
 @Component({
@@ -16,6 +16,7 @@ import { ReservationService } from '../../../services/reservation.service';
     MatInputModule,
     MatFormFieldModule,
     MatButtonModule,
+    RouterLink
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',

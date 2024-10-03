@@ -5,24 +5,32 @@ import { FooterComponent } from './components/navigation/footer/footer.component
 import { SidebarComponent } from './components/navigation/sidebar/sidebar.component';
 import { ComponentService } from './services/component.service';
 import { DarkmodeService } from './services/darkmode.service';
-import { DOCUMENT } from '@angular/common';
+import { DOCUMENT, NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent, SidebarComponent],
+  imports: [
+    RouterOutlet,
+    HeaderComponent,
+    FooterComponent,
+    SidebarComponent,
+    NgClass,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
   constructor(
-    private componentService: ComponentService,
+    protected componentService: ComponentService,
     private darkmodeService: DarkmodeService,
     private renderer: Renderer2,
     @Inject(DOCUMENT) private document: Document
   ) {}
 
   ngOnInit(): void {
+    this.componentService.showHeader();
+    this.componentService.showFooter();
     this.componentService.hideDate();
     this.componentService.hideDepartment();
     this.componentService.hideFaqTitle();
